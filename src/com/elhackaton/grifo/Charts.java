@@ -2,47 +2,64 @@ package com.elhackaton.grifo;
 
 
 import org.primefaces.model.chart.CartesianChartModel;
+import org.primefaces.model.chart.LineChartModel;
+import org.primefaces.model.chart.LineChartSeries;
 
 import javax.faces.bean.ManagedBean;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 @ManagedBean
 public class Charts {
 
 
-    private String end;
-    private String start;
+    private Date end;
+    private Date start;
 
 
-    private void create(String sql) throws SQLException {
+    private LineChartModel create(String sql) throws SQLException {
         Connection connection = DataBase.getConnection();
 
         PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(0, start);
-        statement.setString(1, end);
+        statement.setDate(0, new java.sql.Date(start.getTime()));
+
+        if (end != null)
+            statement.setDate(1, new java.sql.Date(end.getTime()));
 
         ResultSet resultSet = statement.executeQuery();
 
-        CartesianChartModel model = new CartesianChartModel();
-
+        LineChartModel model = new LineChartModel();
+        LineChartSeries serie = new LineChartSeries();
 
         while(resultSet.next()) {
-
-
+            serie.set(resultSet.getTimestamp(1), resultSet.getInt(2));
         }
 
+        model.addSeries(serie);
+
+        return model;
+
     }
 
 
 
-    public String getDate() {
+    public LineChartModel getDay() throws SQLException {
+        end = null;
+        String sql = "SELECT inicio, duracion FROM datos WHERE DATE(inicio) = ?";
+        return create(sql);
+    }
+
+
+    public Date getDate() {
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
         Calendar calendar = Calendar.getInstance();
-        return format.format(calendar.getTime());
+        return calendar.getTime();
     }
+
+    public void setStart(Date start) {
+        this.start = start;
+    }
+
 }

@@ -26,7 +26,8 @@
             <p:tab title="Diario">
                 <h:panelGrid columns="2" cellpadding="10">
                     <p>
-                        Introduzca la fecha a consultar: <p:calendar id="popup" value="#{calendarView.date1}"/>
+                        Introduzca la fecha a consultar: <p:calendar id="popup" value="#{charts.date}"/>
+
                     </p>
                 </h:panelGrid>
             </p:tab>
@@ -48,6 +49,8 @@
             <p:tab title="Guía de Usuario">
                 <h:panelGrid columns="2" cellpadding="10">
                     <p>kajhgkjhflk guiaaa</p>
+
+                    <h:outputText value="#{arduino.dummy}" />
                 </h:panelGrid>
             </p:tab>
         </p:tabView>

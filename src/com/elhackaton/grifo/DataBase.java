@@ -16,8 +16,10 @@ public class DataBase {
 
     public static Connection getConnection() {
         if (connection == null) try {
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost/" + BD + "?user=" + USER + "&password=" + PASS);
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return connection;
