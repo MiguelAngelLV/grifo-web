@@ -13,7 +13,7 @@
     <h1 style="text-align:center"><img src="img/logo.png" alt="Logotipo de gota" style="height:150px"/></h1>
 
     <h:form>
-        <p:tabView dynamic="true" cache="true" style="height:350px">
+        <p:tabView dynamic="true" cache="true">
             <p:tab title="Inicio">
                 <h:panelGrid columns="2" cellpadding="10">
                     <p><b>Grifo</b> es una Aplicación Web cuya función consiste en administrar la cantidad de
@@ -42,12 +42,62 @@
             </p:tab>
             <p:tab title="Documentación">
                 <h:panelGrid columns="2" cellpadding="10">
-                    <p>doc</p>
+                    <h1 style="text-align:center">Documentación</h1>
+                    <h2>Descripción del proyecto</h2>
+                    <p style="text-align: justify">Nuestro proyecto consiste en la instalación de un sencillo sensor en
+                        los grifos de los colegios, de manera que se pueda registrar el gasto de agua y se eduque a los
+                        niños y niñas a reducir su consumo de agua cuando se lavan las manos. </p>
+                    <h2>¿A quién está dirigido?</h2>
+                    <p style="text-align: justify">A administradores de colegios que estén concienciados en la educación
+                        ambiental de sus alumnos y deseen controlar el gasto de agua que tienen en los baños del colegio. </p>
+                    <h2>¿Cómo lo hemos hecho?</h2>
+                    <p style="text-align: justify">
+                        Utilizaremos una placa de arduino para construir un dispositivo con acceso WiFi y acceso a la
+                        base de datos. Este dispositivo estará compuesto por la placa de arduino, el módulo WiFi y una
+                        tira de 9 LEDs programados tal y como sigue:<br/>
+                        [*] Tres LEDs rojos que indican que es demasiado pronto para acabar de lavarse las manos.<br/>
+                        [*] Tres LEDs verdes que indican que es buen momento para acabar de lavarse las manos.<br/>
+                        [*] Tres LEDs rojos que indican que es demasiado tarde para acabar de lavarse las manos, y por
+                        lo tanto hemos desperdiciado agua.<br/>
+                        Como dato <b>obligatorio</b>, este sistema solo fuunciona para <b>grifos monomando</b>, ya que
+                        trabajamos con variaciones en los ángulos de apertura del mando para hacer funcionar los LEDs y
+                        almacenar los datos en función a dichas variaciones.
+                    </p>
                 </h:panelGrid>
             </p:tab>
-            <p:tab title="Guía de Usuario">
+            <p:tab title="Guía de Administrador">
                 <h:panelGrid columns="2" cellpadding="10">
-                    <p>kajhgkjhflk guiaaa</p>
+                    <h1>Guía del Administrador</h1>
+                    <p>Esta sección pretende ser una guía de utilización de la Interfaz Web para poder acceder a los
+                    diferentes datos adquiridos y almacenados a través de nuestro dispositivo. Para ello y dependiendo
+                    de cuáles sean los datos requeridos, se recomiendan seguir los siguientes apartados:</p>
+                    <h2>Comprobar los datos diarios</h2>
+                    <p align="justify">
+                        [*] Pinchar en la sección <b>Diario</b> de la parte superior de la página.<br/>
+                        [*] De forma automática, se mostrarán los datos referentes al día en el que se accede al
+                        servicio. Cabe la posibilidad de, a través del calendario, escoger otro día para ver sus
+                        datos.
+                    </p>
+                    <h2>Comprobar los datos semanales</h2>
+                    <p align="justify">
+                        [*] Pinchar en la sección <b>Semanal</b> de la parte superior de la página.<br/>
+                        [*] De forma automática, se mostrarán los datos referentes a la semana inmediatamente anterior
+                        al día en el que se accede al servicio. Cabe la posibilidad de, a través del calendario, escoger
+                        otro día de inicio de la semana y se cargarán los datos inmediatamente anteriores.
+                    </p>
+                    <h2>Comprobar los datos mensuales</h2>
+                    <p align="justify">
+                        [*] Pinchar en la sección <b>Mensual</b> de la parte superior de la página.<br/>
+                        [*] De forma automática, se mostrarán los datos referentes al mes inmediatamente anterior
+                        al día en el que se accede al servicio. Cabe la posibilidad de, a través del calendario, escoger
+                        otro día de inicio del mes y se cargarán los datos inmediatamente anteriores.
+                    </p>
+                    <h2>¿Qué es lo que vamos a obtener?</h2>
+                    <p align="justify">
+                        [*] Tabla resumen de los datos, incluyendo las fechas, dispositivos conectados en dichas fechas
+                        y valores almacenados en la base de datos.<br/>
+                        [*] Gráfica de resumen de los mismos datos presentados en la tabla, de forma más visual.
+                    </p>
                 </h:panelGrid>
             </p:tab>
         </p:tabView>
