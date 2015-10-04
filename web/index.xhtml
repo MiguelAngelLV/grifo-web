@@ -10,32 +10,50 @@
 <h:head>
 </h:head>
 <h:body>
-    <h1>Hello World PrimeFaces</h1>
+    <h1 style="text-align:center"><img src="img/logo.png" alt="Logotipo de gota" style="height:150px"/></h1>
 
     <h:form>
-        <h3>On-Demand Loading</h3>
-        <p:tabView dynamic="true" cache="true">
-            <p:tab title="Godfather Part I">
+        <p:tabView dynamic="true" cache="true" style="height:350px">
+            <p:tab title="Inicio">
                 <h:panelGrid columns="2" cellpadding="10">
-                    <p:graphicImage name="demo/images/godfather/godfather1.jpg" />
-                    <h:outputText
-                            value="The story begins as Don Vito Corleone..." />
+                    <p><b>Grifo</b> es una Aplicación Web cuya función consiste en administrar la cantidad de
+                        agua consumida por la institución que lo instale.<br/><br/>Consiste en un dispositivo que
+                        se coloca en los grifos a controlar, a través de la que podemos gestionar el gasto de agua
+                        que va a implicar para la institución, además de intentar de una forma divertida, de
+                        concienciar a los niños de la importancia de ahorrar agua.</p>
                 </h:panelGrid>
             </p:tab>
-            <p:tab title="Godfather Part II">
+            <p:tab title="Diario">
                 <h:panelGrid columns="2" cellpadding="10">
-                    <p:graphicImage name="demo/images/godfather/godfather2.jpg" />
-                    <h:outputText value="Francis Ford Coppola's legendary..." />
+                    <p>
+                        Introduzca la fecha a consultar: <p:calendar id="popup" value="#{calendarView.date1}"/>
+                    </p>
                 </h:panelGrid>
             </p:tab>
-            <p:tab title="Godfather Part III">
+            <p:tab title="Semanal">
                 <h:panelGrid columns="2" cellpadding="10">
-                    <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
-                    <h:outputText value="After a break of more than 15 years..." />
+
+                </h:panelGrid>
+            </p:tab>
+            <p:tab title="Mensual">
+                <h:panelGrid columns="2" cellpadding="10">
+                    <p>mensuaaaal</p>
+                </h:panelGrid>
+            </p:tab>
+            <p:tab title="Documentación">
+                <h:panelGrid columns="2" cellpadding="10">
+                    <p>doc</p>
+                </h:panelGrid>
+            </p:tab>
+            <p:tab title="Guía de Usuario">
+                <h:panelGrid columns="2" cellpadding="10">
+                    <p>kajhgkjhflk guiaaa</p>
                 </h:panelGrid>
             </p:tab>
         </p:tabView>
-
+        <p:panel>
+            <p style="font-size: x-small; text-align: right">El Hackatón 2015 || Equipo 3</p>
+        </p:panel>
     </h:form>
 
 </h:body>
