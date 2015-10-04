@@ -10,53 +10,12 @@
 <h:head>
 </h:head>
 <h:body>
-    <h1 style="text-align:center"><img src="img/logo.png" alt="Logotipo de gota" style="height:100px"/></h1>
+    <h1>Hello World PrimeFaces</h1>
 
     <h:form>
-        <p:tabView dynamic="true" cache="true" style="height:350px">
-            <p:tab title="Inicio">
-                <h:panelGrid columns="2" cellpadding="10">
-                    <p><b>Grifo</b> es una Aplicación Web cuya función consiste en administrar la cantidad de
-                    agua consumida por la institución que lo instale.<br/><br/>Consiste en un dispositivo que
-                    se coloca en los grifos a controlar, a través de la que podemos gestionar el gasto de agua
-                    que va a implicar para la institución, además de intentar de una forma divertida, de
-                    cncienciar a los niños de la importancia de ahorrar agua.</p>
-                </h:panelGrid>
-            </p:tab>
-            <p:tab title="Diario">
-                <h:panelGrid columns="2" cellpadding="10">
-                    <p>
-                        Introduzca la fecha a consultar: <p:calendar id="popup" value="#{calendarView.date1}"/>
-                        <p:chart type="line" model="#{chartView.lineModel1}" style="height:300px;"/>
-                    </p>
-                </h:panelGrid>
-            </p:tab>
-            <p:tab title="Semanal">
-                <h:panelGrid columns="2" cellpadding="10">
-                    <p>
-                        Introduzca la fecha de inicio: <p:calendar id="popup" value="#{calendarView.date1}"/>
-                    </p>
-                </h:panelGrid>
-            </p:tab>
-            <p:tab title="Mensual">
-                <h:panelGrid columns="2" cellpadding="10">
-                    <p>mensuaaaal</p>
-                </h:panelGrid>
-            </p:tab>
-            <p:tab title="Documentación">
-              <h:panelGrid columns="2" cellpadding="10">
-                    <p>doc</p>
-              </h:panelGrid>
-            </p:tab>
-            <p:tab title="Guía de Usuario">
-                <h:panelGrid columns="2" cellpadding="10">
-                    <p>kajhgkjhflk guiaaa</p>
-                </h:panelGrid>
-            </p:tab>
-        </p:tabView>
-        <p:panel>
-            <p style="font-size: x-small; text-align: right">El Hackatón 2015 || Equipo 3</p>
-        </p:panel>
+        <p:editor value="" />
+        <p:calendar id="popup"  />
+
     </h:form>
 
 </h:body>
